@@ -1,0 +1,48 @@
+{
+  "name": "web-in-mobile-tools",
+  "version": "0.1.0",
+  "description": "Building blocks for running a bundled web app inside a React Native shell: local static web server, and more to come.",
+  "keywords": [
+    "react-native",
+    "webview",
+    "static-server",
+    "offline",
+    "hybrid-app",
+    "local-server"
+  ],
+  "license": "MIT",
+  "author": "Dmitry Pliusnin",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "format": "prettier --write \"src/**/*.ts\" \"*.{json,md}\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"*.{json,md}\"",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn clean && yarn typecheck && yarn build"
+  },
+  "peerDependencies": {
+    "@dr.pogodin/react-native-static-server": ">=0.25.0",
+    "react-native-blob-util": ">=0.22.0",
+    "react-native-zip-archive": ">=7.0.0"
+  },
+  "devDependencies": {
+    "@dr.pogodin/react-native-static-server": "0.25.4",
+    "prettier": "2.8.8",
+    "react-native-blob-util": "0.24.6",
+    "react-native-zip-archive": "7.0.2",
+    "typescript": "^5.5.4"
+  }
+}
