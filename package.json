@@ -34,15 +34,15 @@
     "prepublishOnly": "yarn clean && yarn typecheck && yarn build"
   },
   "peerDependencies": {
-    "@dr.pogodin/react-native-static-server": ">=0.25.0",
-    "react-native-blob-util": ">=0.22.0",
-    "react-native-zip-archive": ">=7.0.0"
+    "@dr.pogodin/react-native-static-server": ">=0.28.0",
+    "react-native-blob-util": ">=0.25.0",
+    "react-native-zip-archive": ">=9.0.0"
   },
   "devDependencies": {
-    "@dr.pogodin/react-native-static-server": "0.25.4",
+    "@dr.pogodin/react-native-static-server": "0.28.1",
     "prettier": "2.8.8",
-    "react-native-blob-util": "0.24.6",
-    "react-native-zip-archive": "7.0.2",
+    "react-native-blob-util": "0.25.1",
+    "react-native-zip-archive": "9.5.3",
     "typescript": "^5.5.4"
   }
 }
